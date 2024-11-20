@@ -1,9 +1,10 @@
 import mongoose from "mongoose";
+import env from "dotenv";
+env.config();
 
-let uri = "";
-mongoose.connect(uri);
+export const dbConndection = mongoose.connect(process.env.LOCAL_URI);
 
-mongoose
+dbConndection
   .then(() => {
     console.log("data base connected successfully");
   })
