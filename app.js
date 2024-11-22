@@ -10,6 +10,9 @@ let server = express();
 
 server.use(express.json());
 server.use(cors());
+
+// Routes Here
+
 // connection to database
 dbConndection;
 
