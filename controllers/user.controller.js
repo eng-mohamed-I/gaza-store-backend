@@ -22,8 +22,20 @@ const signUp = async (req, res) => {
 
     return res.status(200).json({ message: "user signup successfully" });
   } catch (error) {
-    res.status(500).json({ message: "server occurred", error });
+    return res.status(500).json({ message: "server occurred", error });
   }
 };
 
-export { signUp };
+const signIn = async (req, res) => {
+  try {
+    const { email, password } = req;
+
+    if (!email || !password) {
+      return res.status(401).json({ message: "no email or password" });
+    }
+  } catch (error) {
+    return res.status(500).json({ message: "server occurred", error });
+  }
+};
+
+export { signUp, signIn };

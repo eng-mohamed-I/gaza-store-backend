@@ -3,6 +3,7 @@ import env from "dotenv";
 import cors from "cors";
 import { dbConndection } from "./config/dbConnection.js";
 import userRoutes from "./routes/user.routes.js";
+// ----------------------------------------------
 
 env.config();
 
